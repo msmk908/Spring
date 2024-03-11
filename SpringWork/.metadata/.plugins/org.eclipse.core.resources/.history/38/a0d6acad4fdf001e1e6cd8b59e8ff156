@@ -1,0 +1,15 @@
+package com.codehows.sample;
+
+import org.junit.runner.RunWith;
+
+import lombok.extern.log4j.Log4j;
+
+
+@RunWith(StringJUnit4ClassRunner.class)
+@ComtextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+@Log4j
+public class SampleTests {
+	
+	@Setter(onMethod_ = { @Autowired})
+
+}

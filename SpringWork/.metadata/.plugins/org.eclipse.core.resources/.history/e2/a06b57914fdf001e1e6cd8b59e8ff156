@@ -1,0 +1,8 @@
+package com.codehows.sample;
+
+import static org.junit.Assert.assertNotNull;
+
+
+public class SampleTests {
+
+}
