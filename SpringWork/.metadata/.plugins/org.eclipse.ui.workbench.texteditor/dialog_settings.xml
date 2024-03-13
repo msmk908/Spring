@@ -8,6 +8,9 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="batis"/>
+			<item value="info"/>
+			<item value="org.apache"/>
 			<item value="hika"/>
 			<item value="org.springframework"/>
 			<item value="org.projectlombok"/>
@@ -20,15 +23,13 @@
 			<item value="api"/>
 			<item value="maven-com"/>
 			<item value="junit"/>
-			<item value="servlet"/>
-			<item value="log4"/>
-			<item value="bgee"/>
 		</list>
 		<list key="replacehistory">
+			<item value="debug"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-80"/>
+		<item key="DIALOG_X_ORIGIN" value="6"/>
 		<item key="DIALOG_Y_ORIGIN" value="383"/>
 		<item key="DIALOG_WIDTH" value="248"/>
 		<item key="DIALOG_HEIGHT" value="354"/>
