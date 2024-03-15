@@ -37,7 +37,7 @@
 	</bean>
 	
 	<mybatis-spring:scan base-package="org.codehows.mapper"/>
-	<context:component-scan base-package="org.codehows.service"/>
+	<context:component-scan base-package="org.codehows.service"></context:component-scan>
 </beans>
 
 

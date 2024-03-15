@@ -23,6 +23,15 @@
 	
 	<context:component-scan base-package="org.codehows.controller" />
 	
+	<!-- 스프링 MVC의 JSP를 처리하는 설정 -->
+	<resources mapping="/resources/**" location="/resources/" />
+	
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<resources mapping="/resources/**" location="/resources/" />
 	
 	
 </beans:beans>

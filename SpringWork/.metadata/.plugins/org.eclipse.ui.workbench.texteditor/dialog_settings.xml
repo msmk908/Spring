@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="resuilt"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="resuilt"/>
+			<item value="page-wrapper"/>
+			<item value="wrapper"/>
+			<item value="page-"/>
+			<item value="../"/>
+			<item value="0 errors"/>
 			<item value="batis"/>
 			<item value="info"/>
 			<item value="org.apache"/>
@@ -17,14 +23,10 @@
 			<item value="artifactId"/>
 			<item value="lombok"/>
 			<item value="plugin"/>
-			<item value="plug"/>
-			<item value="loo"/>
-			<item value="loom"/>
-			<item value="api"/>
-			<item value="maven-com"/>
-			<item value="junit"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/"/>
+			<item value="/resouces"/>
 			<item value="debug"/>
 		</list>
 	</section>

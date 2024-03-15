@@ -12,9 +12,8 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @Service
 @AllArgsConstructor
-public abstract class BoardServiceImpl implements BoardService {
+public class BoardServiceImpl implements BoardService {
 
-	//
 	private BoardMapper mapper;
 
 	@Override
