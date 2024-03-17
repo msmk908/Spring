@@ -59,4 +59,30 @@
 	
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var formObj = $("form");
+	
+	$('button').on("click", function(e){
+		
+		e.preventDefault();
+		
+		var operation = $(this).data("oper");
+		
+		console.log(operation);
+		
+		if(operation === 'remove'){
+			formObj.attr("action", "/board/remove");
+		}else if(operation === 'list'){
+			//move to list
+			self.location = "/board/list";
+			return;
+		}
+		formObj.submit();
+		
+	});
+});
+</script>
+
 <%@ include file="../includes/footer.jsp" %>
