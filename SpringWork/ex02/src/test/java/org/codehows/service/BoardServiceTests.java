@@ -1,8 +1,9 @@
 package org.codehows.service;
 
-import static org.junit.Assert.assertNotNull;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 
 import org.codehows.domain.BoardVO;
+import org.codehows.domain.Criteria;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,11 +41,12 @@ public class BoardServiceTests {
 //		log.info("생성된 게시물의 번호: " + board.getBno());
 //	}
 	
-//	@Test
-//	public void testGetList() {
-//		
-//		service.getList().forEach(board -> log.info(board));
-//	}
+	@Test
+	public void testGetList() {
+		
+		// service.getList().forEach(board -> log.info(board));
+		service.getList(new Criteria(2, 10)).forEach(board -> log.info(board));
+	}
 	
 //	@Test
 //	public void testGet() {
