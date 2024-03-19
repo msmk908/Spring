@@ -63,6 +63,52 @@
 
 </div>
 
+<script type="text/javascript" src="/resources/js/reply.js"></script>
+
+<script>
+
+	console.log("===============");
+	console.log("JS TEST");
+	
+	var bnoValue = '<c:out value="${board.bno}"/>';
+	
+	// reply List Test
+	/* replyService.getList({bno:bnoValue, page:1}, function(list){
+		
+		for(var i = 0, len = list.length||0; i < len; i++) {
+			console.log(list[i]);
+		}
+	}); */
+	
+	// 댓글 삭제 테스트
+	/* replyService.remove(34, function(count){
+		
+		console.log(count);
+		
+		if(count === "success"){
+			alert("REMOVED");
+		}
+	}, function(err){
+		alert('ERROR...');
+	}); */
+	
+	// 댓글 수정 테스트
+	/* replyService.update({
+		rno : 34,
+		bno : bnoValue,
+		reply : "나다 10shakes...."
+	}, function(result){
+		alert("수정 완료...");
+		
+	}); */
+	
+	// 댓글 번호 테스트
+	replyService.get(37, function(data){
+		console.log(data);
+	});
+
+</script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 
