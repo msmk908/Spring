@@ -3,6 +3,7 @@ package org.codehows.service;
 import java.util.List;
 
 import org.codehows.domain.Criteria;
+import org.codehows.domain.ReplyPageDTO;
 import org.codehows.domain.ReplyVO;
 import org.codehows.mapper.ReplyMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,14 @@ public class ReplyServiceImpl implements ReplyService {
 		
 		return mapper.getListWithPaging(cri, bno);
 		
+	}
+	
+	@Override
+	public ReplyPageDTO getListPage(Criteria cri, Long bno) {
+		
+		return new ReplyPageDTO(
+				mapper.getCountByBno(bno),
+				mapper.getListWithPaging(cri, bno));
 	}
 	
 }

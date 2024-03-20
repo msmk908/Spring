@@ -31,7 +31,8 @@ var replyService = (function(){
 		$.getJSON("/replies/pages/" + bno + "/" + page + ".json",
 			function(data){
 				if(callback){
-					callback(data);
+					// callback(data); // 댓글 목록만 가져오는 경우
+					callback(data.replyCnt, data.list); // 댓글 숫자와 목록을 가져오는 경우
 				}
 			}).fail(function(xhr, status, err){
 				if (error) {
@@ -104,26 +105,26 @@ var replyService = (function(){
 			var mi = dateObj.getMinutes();
 			var ss = dateObj.getSeconds();
 			
-			return [ (jj > 9 ? '' : '0') + hh, ':', (mi > 9 ? '' : '0') + mi, ';' , (ss > 9 ? '' : '0') + ss ].join('');
+			return [ (hh > 9 ? '' : '0') + hh, ':', (mi > 9 ? '' : '0') + mi, ':' , (ss > 9 ? '' : '0') + ss ].join('');
 			
 		} else {
 		
 			var yy = dateObj.getFullYear();
-			var mm = dateObj.getMinutes() + 1; // getMonth() is zero-based
-			var ss = dateObj.getDate();
+			var mm = dateObj.getMonth() + 1; // getMonth() is zero-based
+			var dd = dateObj.getDate();
 			
 			return [ yy, '/', (mm > 9 ? '' : '0') + mm, '/', (dd >9 ? '' : '0') + dd ].join('');
 		}
 	};
-
+	
 	return {
 		add : add,
 		getList : getList,
 		remove : remove,
 		update : update,
 		get : get,
-		displayTime = displayTime
-	};
+		displayTime : displayTime
+	}
 })();
 
 

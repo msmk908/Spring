@@ -3,6 +3,7 @@ package org.codehows.controller;
 import java.util.List;
 
 import org.codehows.domain.Criteria;
+import org.codehows.domain.ReplyPageDTO;
 import org.codehows.domain.ReplyVO;
 import org.codehows.service.ReplyService;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,6 @@ public class ReplyController {
 	
 	private ReplyService service;
 	
-	
 	@PostMapping(value = "/new",
 			consumes = "application/json",
 			produces = { MediaType.TEXT_PLAIN_VALUE })
@@ -46,6 +46,7 @@ public class ReplyController {
 				// 삼항 연산자 처리
 	}
 	
+	/*
 	@GetMapping(value = "/pages/{bno}/{page}",
 				produces = {MediaType.APPLICATION_XML_VALUE,
 							MediaType.APPLICATION_JSON_UTF8_VALUE })
@@ -61,6 +62,7 @@ public class ReplyController {
 		
 		return new ResponseEntity<>(service.getList(cri, bno), HttpStatus.OK);
 	}
+	*/
 	
 	@GetMapping(value = "/{rno}",
 				produces = {MediaType.APPLICATION_XML_VALUE,
@@ -101,4 +103,19 @@ public class ReplyController {
 					? new ResponseEntity<>("success", HttpStatus.OK)
 					: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	@GetMapping(value = "/pages/{bno}/{page}",
+				produces = {MediaType.APPLICATION_XML_VALUE,
+							MediaType.APPLICATION_JSON_UTF8_VALUE })
+	public ResponseEntity<ReplyPageDTO> getList(@PathVariable("page") int page, @PathVariable("bno") Long bno){
+		
+		Criteria cri = new Criteria(page, 10);
+		
+		log.info("get Reply List bno: " + bno);
+		
+		log.info("cri: " + cri);
+		
+		return new ResponseEntity<>(service.getListPage(cri, bno), HttpStatus.OK);
+	}
+	
 }

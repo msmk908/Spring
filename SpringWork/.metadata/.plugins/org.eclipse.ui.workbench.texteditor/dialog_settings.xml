@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="panel-heading"/>
+		<item key="selection" value="codehows"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="codehows"/>
+			<item value="mybatis"/>
+			<item value="Hikari"/>
+			<item value="aspectjweaver"/>
+			<item value="aspect"/>
+			<item value="junit"/>
+			<item value="lombok"/>
+			<item value="madal"/>
+			<item value="fa-conm"/>
+			<item value="fa-comm"/>
+			<item value="modal fade"/>
+			<item value="show"/>
 			<item value="panel-heading"/>
 			<item value="row"/>
 			<item value="json"/>
-			<item value="jdbc"/>
-			<item value="hikari"/>
-			<item value="com.zaxxer"/>
-			<item value="dao"/>
-			<item value="mybatis"/>
-			<item value="ojdbc"/>
-			<item value="com.faster"/>
-			<item value="move"/>
-			<item value="pagination"/>
-			<item value="dataTables_"/>
-			<item value="dataTable"/>
-			<item value="data"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>
