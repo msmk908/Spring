@@ -2,6 +2,7 @@ package org.codehows.service;
 
 import java.util.List;
 
+import org.codehows.domain.BoardAttachVO;
 import org.codehows.domain.BoardVO;
 import org.codehows.domain.Criteria;
 
@@ -20,4 +21,7 @@ public interface BoardService {
 	public List<BoardVO> getList(Criteria cri);
 	
 	public int getTotal(Criteria cri);
+	
+	public List<BoardAttachVO> getAttachList(Long bno);
+	
 }

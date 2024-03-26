@@ -2,6 +2,7 @@ package org.codehows.service;
 
 import java.util.List;
 
+import org.codehows.domain.BoardAttachVO;
 import org.codehows.domain.BoardVO;
 import org.codehows.domain.Criteria;
 import org.codehows.mapper.BoardAttachMapper;
@@ -61,14 +62,32 @@ public class BoardServiceImpl implements BoardService {
 	public boolean modify(BoardVO board) {
 
 		log.info("modify......" + board);
+		
+		attachMapper.deleteAll(board.getBno());
+		
+		boolean modifyResult = mapper.update(board) == 1;
+		
+		if (modifyResult && board.getAttachList() != null && board.getAttachList().size() > 0) {
+			
+			board.getAttachList().forEach(attach -> {
+				
+				attach.setBno(board.getBno());
+				attachMapper.insert(attach);
+				
+			});
+			
+		}
 
-		return mapper.update(board) == 1;
+		return modifyResult;
 	}
 
+	@Transactional
 	@Override
 	public boolean remove(Long bno) {
 		
 		log.info("remove...." + bno);
+		
+		attachMapper.deleteAll(bno);
 
 		return mapper.delete(bno) == 1;
 	}
@@ -94,6 +113,15 @@ public class BoardServiceImpl implements BoardService {
 		
 		log.info("get total count");
 		return mapper.getTotalCount(cri);
+	}
+	
+	@Override
+	public List<BoardAttachVO> getAttachList(Long bno){
+		
+		log.info("get Attach list by bno" + bno);
+		
+		return attachMapper.findByBno(bno);
+		
 	}
 
 }
