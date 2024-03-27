@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="uploadResult"/>
+		<item key="selection" value="opra"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="opra"/>
+			<item value="op"/>
+			<item value="jobj"/>
+			<item value="click"/>
 			<item value="uploadResult"/>
-			<item value="gruop"/>
-			<item value="&lt;/a&gt;"/>
-			<item value="form"/>
-			<item value="getAttachList"/>
-			<item value="register"/>
-			<item value="formObj"/>
-			<item value="submit"/>
-			<item value="deleteFile"/>
-			<item value="(&quot;.uploadResult&quot;)"/>
-			<item value="showUploaded"/>
-			<item value="fileCallPath"/>
-			<item value="showImage"/>
-			<item value="style"/>
-			<item value="showUploadedFile"/>
+			<item value="obj"/>
+			<item value="수정 이벤트"/>
+			<item value="boolean"/>
+			<item value="exe"/>
+			<item value="uploadDiv"/>
+			<item value="remove"/>
+			<item value="len"/>
+			<item value="zmg"/>
+			<item value="console"/>
+			<item value="bno"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
