@@ -1,6 +1,8 @@
 package org.codehows.security;
 
+import org.codehows.domain.MemberVO;
 import org.codehows.mapper.MemberMapper;
+import org.codehows.security.domain.CustomUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,7 +22,12 @@ public class CustomUserDetailsService implements UserDetailsService {
 		
 		log.warn("Load User By UserName : " + userName);
 		
-		return null;
+		// userName means userid
+		MemberVO vo = memberMapper.read(userName);
+		
+		log.warn("queried by member mapper: " + vo);
+		
+		return vo == null ? null : new CustomUser(vo);
 		
 	}
 
